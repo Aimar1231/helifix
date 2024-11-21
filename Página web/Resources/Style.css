@@ -1,0 +1,578 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #0a0a0a; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    border-bottom: 2px solid #444444;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/Resources/Files/Fonts/Montserrat-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Estilos para el logo */
+.logo img {
+    height: 30px; /* Ajusta el tamaño del logo */
+    width: auto;
+    transition: transform 0.3s; /* Animación al pasar el cursor */
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo img:hover {
+    transform: scale(1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Estilos para el menú de navegación */
+.nav-menu {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff; /* Color de los enlaces */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Animación de color y movimiento */
+}
+
+.nav-menu a:hover {
+    color: #797979; /* Color del enlace al pasar el cursor */
+    transform: translateY(-1px); /* Efecto de elevación */
+}
+
+/* Estilos para pantalla móvil */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-top: 10px;
+    }
+    
+    .nav-menu a {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para la primera sección */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 350px 20px;
+    background-image: url(/Resources/Files/hero-background.jpg); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/Resources/Files/Fonts/Montserrat-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Título */
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+
+}
+
+/* Descripción */
+.hero p {
+    font-family: 'Montserrat';
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Botón de llamada a la acción */
+.hero .cta {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: rgba(67, 67, 67, .5);
+    color: #fff;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.hero .cta:hover {
+    background-color: rgba(126, 126, 126, .8);
+}
+
+
+/* Estilos para la segunda sección */
+
+
+.three-columns {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    
+}
+
+/* Estilos para cada columna */
+.column {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor interno de cada columna */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagen circular */
+.content img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Título */
+.content h2 {
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.content h2 a {
+    font-family: 'Montserrat';
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.content h2 a:hover {
+    color: #444444;
+}
+
+/* Descripción */
+.content p {
+    font-family: 'Montserrat';
+    font-size: 1em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .three-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para la Sección de Cinco Columnas */
+.product-section {
+    font-family: 'Montserrat';
+    padding: 80px 20px; /* Espacio adicional arriba y abajo */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Color de texto blanco */
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px; /* Espacio debajo del título */
+    color: #ffffff; /* Azul brillante */
+    text-transform: uppercase;
+}
+
+/* Contenedor y columnas */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    font-family: 'Montserrat';
+    flex: 1 1 calc(20% - 20px); /* Cinco columnas */
+    background-color: #272727;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Imagen más grande */
+.product-image img {
+    width: 100%;
+    height: 250px; /* Aumenta la altura fija */
+    border-radius: 4px;
+    object-fit: cover; /* Mantiene las proporciones sin deformar la imagen */
+}
+
+/* Títulos */
+.product-title {
+    font-size: 1.2em;
+    margin: 15px 0 10px 0;
+    color: #fff;
+}
+
+.product-title a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.product-title a:hover {
+    color: #ffffff;
+}
+
+/* Precios */
+.product-price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+/* Responsivo */
+
+/* Tablet: Tres columnas */
+@media (max-width: 992px) {
+    .product-item {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+    .product-image img {
+        height: 200px; /* Ajuste proporcional para pantallas más pequeñas */
+    }
+}
+
+/* Móvil grande: Dos columnas */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+    .product-image img {
+        height: 180px; /* Ajuste proporcional */
+    }
+}
+
+/* Móvil pequeño: Una columna */
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%;
+    }
+    .product-image img {
+        height: 150px; /* Ajuste proporcional */
+    }
+}
+
+/* Estilos para la Sección de Dos Columnas */
+/* Estilo para la sección */
+.two-column-section {
+    font-family: 'Montserrat';
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f9f9f9; /* Fondo negro */
+    color: #070707; /* Texto blanco */
+    padding: 40px 20px;
+}
+
+/* Estilo para la columna izquierda */
+.column-left {
+    flex: 1 1 50%; /* Ocupa la mitad del espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: left; /* Alinea el texto en el centro */
+    padding: 20px;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.column-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Marco para la imagen cuadrada con vínculo */
+.image-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.image-frame {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #070707; /* Marco azul brillante */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Efecto hover en la imagen con vínculo */
+.image-link:hover .image-frame {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px #ccc;
+}
+
+/* Texto paralelo al marco */
+.image-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre imagen y texto */
+    text-align: left;
+}
+
+.text-parallel {
+    font-size: 1.5em;
+    color: #070707; /* Gris claro */
+    margin: 0;
+}
+
+/* Texto debajo del marco de la imagen */
+.text-below-image p {
+    margin: 20px 0;
+    font-size: 0.8em;
+    color: #070707; /* Gris claro */
+}
+
+/* Estilo para la columna derecha */
+.column-right {
+    flex: 1 1 50%; /* Ocupa la mitad del espacio */
+    display: flex;
+    justify-content: flex-end; /* Alinea al borde derecho */
+    align-items: center;
+    padding: 0;
+    position: relative;
+}
+
+/* Imagen grande */
+.column-right .large-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-right: 0; /* Elimina cualquier margen derecho */
+}
+
+
+/* Estilo general para la sección mapa */
+.branch-section {
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: space-between; /* Asegura separación horizontal uniforme */
+    align-items: center; /* Alinea las columnas verticalmente */
+    gap: 20px;
+    background-color: #070707; /* Fondo claro */
+    padding: 40px 20px;
+    color: #f9f9f9; /* Texto oscuro */
+}
+
+/* Columnas */
+.branch-column {
+    flex: 1 1 50%; /* Cada columna ocupa la mitad del ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Títulos de columnas */
+.branch-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #f9f9f9;
+}
+
+/* Contenedor del mapa */
+.map-container {
+    width: 100%;
+    max-width: 400px; /* Tamaño máximo para el mapa */
+    aspect-ratio: 1; /* Forma cuadrada */
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la lista desplegable */
+.dropdown-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.branch-dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.branch-dropdown:focus {
+    border-color: #ccc; /* Color azul al seleccionar */
+    outline: none;
+}
+
+
+
+            /* Estilo general del footer */
+/* Estilo general del footer */
+.footer-section {
+    font-family: 'Montserrat';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio uniforme entre columnas */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #f9f9f9; /* Fondo oscuro */
+    color: #070707; /* Texto blanco */
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+/* Columnas del footer */
+.footer-column {
+    flex: 1 1 20%; /* Cada columna ocupa aproximadamente el 20% del ancho */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    text-align: center;
+    min-width: 150px; /* Evita que se hagan demasiado pequeñas */
+}
+
+/* Estilo del logo */
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Títulos de columnas */
+.footer-heading {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #000000; /* Color azul para los títulos */
+}
+
+/* Listas del footer */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: #171717;
+    transition: color 0.3s;
+}
+
+.footer-list a:hover {
+    color: #ccc; /* Color azul en hover */
+}
+
+/* Botones de redes sociales */
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-button {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    background-color: #444; /* Fondo gris oscuro */
+    transition: background-color 0.3s;
+}
+
+.social-button.facebook { background-color: #3b5998; } /* Facebook */
+.social-button.twitter { background-color: #00acee; } /* Twitter */
+.social-button.instagram { background-color: #e4405f; } /* Instagram */
+
+.social-button:hover {
+    background-color: #ccc; /* Azul claro en hover */
+}
+
+
+
+
